@@ -1,0 +1,29 @@
+@import '@src/styles/vars.scss';
+
+.advantage_cart{
+  background: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  z-index: 1;
+
+  &.small {
+    width: fit-content;
+  }
+
+  &.big {
+    width: 100%;
+    border-radius: 20px;
+    padding: 16px 32px;
+  }
+
+  @media screen and (max-width: $display-tablet) {
+    &.small {
+      background: transparent;
+      border: 1px solid #fff;
+
+      h3 {
+        color: #fff;
+      }
+    }
+  }
+}

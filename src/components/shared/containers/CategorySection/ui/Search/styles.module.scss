@@ -1,0 +1,61 @@
+@import '@src/styles/vars.scss';
+
+.categorySection__search {
+    position: relative;
+
+    input {
+        cursor: pointer;
+        border: none;
+        padding: 8px 50px 8px 16px;
+        border-radius: 8px;
+
+        &::placeholder {
+            color: #011022
+        }
+
+        &:focus {
+            cursor: auto;
+            outline: none;
+        }
+    }
+
+    &_btn {
+        cursor: pointer;
+        position: absolute;
+        background: transparent;
+        right: 3%;
+        top: 53%;
+        transform: translateY(-50%);
+    }
+
+    @media screen and (max-width: $display-mobile) {
+        width: 100%;
+
+        input {
+            width: 100%;
+        }
+    }
+}
+
+.search_inner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 16px;
+
+    &_body {
+        position: absolute;
+        top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        right: 0;
+        width: 100%;
+        padding: 8px 16px;
+        border-radius: 8px;
+        background: #fff;
+        max-height: 300px;
+        overflow: auto;
+        z-index: 2;
+    }
+}

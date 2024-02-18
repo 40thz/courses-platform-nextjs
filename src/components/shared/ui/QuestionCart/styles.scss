@@ -1,0 +1,52 @@
+.questionCart {
+    cursor: pointer;
+    transition: box-shadow 0.5s;
+    height: fit-content;
+    min-height: 64px;
+    user-select: none;
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .typography {
+            max-width: 444px;
+        }
+    }
+
+    &-description {
+        transition: height 0.5s;
+        overflow: hidden;
+
+        .questionCart-text {
+            padding-top: 20px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+    }
+
+
+
+    &.active {
+        .questionCart-description {
+            .test {
+                opacity: 1;
+            }
+        }
+    }
+
+    &:hover {
+        box-shadow: 2px 2px 18px 0px rgba(34, 60, 80, 0.2);
+    }
+
+    @media screen and (max-width: $display-mobile) {
+        &-header {
+            .typography {
+                max-width: 234px;
+            }
+        }
+    }
+}

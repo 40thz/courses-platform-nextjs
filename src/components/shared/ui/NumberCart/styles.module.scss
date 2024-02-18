@@ -1,0 +1,12 @@
+.number_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+
+  p {
+    font-family: var(--font-montserrat);
+    max-width: 210px;
+  }
+}

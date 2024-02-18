@@ -1,0 +1,40 @@
+@import '@src/styles/vars.scss';
+
+.cart {
+    transition: all 0.5s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    padding: 32px;
+    border-radius: 20px;
+    background: #fff;
+
+    &_icon {
+        transition: all 0.5s;
+        max-width: 80px;
+        width: 100%;
+        margin: 0 auto;
+        filter: grayscale(100%);
+        opacity: 0.3;
+    }
+
+    &:hover {
+        box-shadow: 2px 2px 18px 0px rgba(34, 60, 80, 0.2);
+
+        .cart_icon {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+    }
+
+    @media screen and (max-width: $display-tablet) {
+        padding: 16px;
+        gap: 16px;
+
+        p {
+            text-align: center;
+        }
+    }
+}

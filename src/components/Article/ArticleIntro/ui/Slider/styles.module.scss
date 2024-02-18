@@ -1,0 +1,23 @@
+.slider {
+    border-radius: 20px;
+    overflow: hidden;
+
+
+    &_container {
+        display: flex;
+        flex-direction: column;
+        max-width: 575px;
+        gap: 16px;
+        
+    }
+
+    &_dots {
+        margin: 0 auto;
+        // max-width: 300px;
+        // width: 100%;
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        justify-content: center;
+    }
+}

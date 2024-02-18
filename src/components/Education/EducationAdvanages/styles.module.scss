@@ -1,0 +1,35 @@
+@import '@src/styles/vars.scss';
+
+.advantages {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    gap: 32px;
+
+    &_cart {
+        padding: 34px 32px;
+        background: #fff;
+        border-radius: 20px;
+    }
+
+    &_side {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    img {
+        border-radius: 20px;
+        max-height: 370px;
+        overflow: hidden;
+    }
+
+
+    @media screen and (max-width: $display-mobile) {
+       grid-template-columns: 1fr;
+
+       &_side {
+        gap: 20px;
+       }
+    }
+
+}

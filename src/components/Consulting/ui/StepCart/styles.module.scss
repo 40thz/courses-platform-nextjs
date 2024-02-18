@@ -1,0 +1,45 @@
+@import '@src/styles/vars.scss';
+
+.cart {
+    position: relative;
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+    padding: 32px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+
+    h1 {
+        z-index: 2;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+            font-weight: bold;
+        }
+    }
+
+    .line {
+        position: absolute;
+        pointer-events: none;
+        right: 0;
+        bottom: -10px;
+        width: 200px;
+        opacity: 0.4;
+    }
+
+
+    @media screen and (max-width: $display-mobile) {
+        padding: 16px;
+
+        p {
+            max-width: 250px;
+        }
+    }
+
+}

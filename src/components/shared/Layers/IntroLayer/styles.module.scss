@@ -1,0 +1,24 @@
+@import '@src/styles/vars.scss';
+
+.introLayer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  transition: all 0.5s;
+
+  .image {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  &:hover {
+    box-shadow: 4px 4px 18px 0px rgba(34, 60, 80, 0.2);
+  }
+
+  @media screen and (max-width: $display-mobile) {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+}

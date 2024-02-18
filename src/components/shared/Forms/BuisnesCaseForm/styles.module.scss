@@ -1,0 +1,32 @@
+@import '@src/styles/vars.scss';
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+
+    &_column {
+        grid-template-columns: 1fr;
+    }
+
+    &_right {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &_left {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    @media screen and (max-width: $display-mobile) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        
+        .textarea {
+            height: 120px;
+        }
+    }
+}

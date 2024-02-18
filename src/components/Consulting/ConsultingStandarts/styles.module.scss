@@ -1,0 +1,19 @@
+@import '@src/styles/vars.scss';
+
+.standarts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    @media screen and (max-width: $display-mobile) {
+       grid-template-columns: 1fr;
+    }
+}
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 160px;
+    height: 100%;
+}

@@ -1,0 +1,163 @@
+@import "@src/styles/vars.scss";
+
+.cart {
+  display: flex;
+  gap: 0px;
+
+  .button {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+
+    &_year {
+      transform: translateX(40px);
+    }
+
+    &_figure {
+      position: relative;
+      width: 60px;
+      height: 200px;
+      background: $gray;
+      transform: rotate(30deg);
+      z-index: 1000;
+      transition: background 0.5s;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        background: $gray;
+        width: 100px;
+        height: 60px;
+        transition: background 0.5s;
+
+      }
+
+      &::before {
+        bottom: 0;
+        right: 0;
+        transform: rotate(-30deg);
+        transform-origin: bottom right;
+        clip-path: polygon(66% 0, 100% 0%, 100% 100%, 28% 100%);
+      }
+
+      &::after {
+        top: 0;
+        left: 0;
+        transform: rotate(-30deg);
+        transform-origin: top left;
+        clip-path: polygon(0 0, 70% 0%, 34% 100%, 0% 100%);
+      }
+    }
+  }
+
+  .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: all 0.5s;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+
+    &_title {
+      width: 785px;
+    }
+
+    &_description {
+      width: 785px;
+    }
+  }
+
+  &.active {
+    .button {
+      &_figure {
+        background: $default;
+
+        &::before,
+        &::after {
+          background: $default;
+        }
+      }
+    }
+
+    .content {
+      opacity: 1;
+      visibility: visible;
+      width: 800px;
+      padding: 0 100px;
+
+      &_description {
+        width: 700px;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    transform: translate(26px, -30px);
+  }
+
+  &:nth-child(3) {
+    transform: translate(52px, -60px);
+  }
+
+  &:nth-child(4) {
+    transform: translate(78px, -90px);
+  }
+
+  @media screen and (max-width: $display-tablet) {
+    .content {
+      &_title {
+        width: 400px;
+      }
+
+      &_description {
+        width: 400px;
+      }
+    }
+
+
+    &.active {
+      .content {
+
+        width: 600px;
+        padding: 0 100px;
+
+        &_description {
+          width: 400px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $display-mobile) {
+    .button {
+      &_figure {
+        width: 40px;
+
+        &::before {
+          clip-path: polygon(89% 0, 100% 0%, 100% 100%, 53% 100%);
+        }
+
+        &::after {
+          clip-path: polygon(0 0, 47% 0%, 11% 100%, 0% 100%);
+        }
+      }
+    }
+    &:nth-child(2) {
+      transform: translate(4px, -30px);
+    }
+  
+    &:nth-child(3) {
+      transform: translate(7px, -60px);
+    }
+  
+    &:nth-child(4) {
+      transform: translate(10px, -90px);
+    }
+  }
+}

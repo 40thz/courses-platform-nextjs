@@ -1,0 +1,19 @@
+@import '@src/styles/vars.scss';
+
+.service {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    gap: 32px;
+
+    @media screen and (max-width: $display-tablet) {
+        display: flex;
+        flex-direction: column;
+
+        div {
+            &:first-child {
+                width: 80%;
+            }
+        }
+    }
+
+}

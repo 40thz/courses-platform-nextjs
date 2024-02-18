@@ -1,0 +1,35 @@
+.marquee {
+    --gap: 10rem;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+
+    li {
+        list-style-type: none;
+    }
+}
+
+.marquee__content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+
+}
+
+.enable__animation .marquee__content {
+    animation: scroll 100s linear infinite;
+}
+
+// @keyframes scroll {
+//     from {
+//         transform: translateX(0);
+//     }
+
+//     to {
+//         transform: translateX(calc(-100% - var(--gap)));
+//     }
+// }

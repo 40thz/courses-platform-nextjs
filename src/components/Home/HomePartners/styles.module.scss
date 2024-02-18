@@ -1,0 +1,19 @@
+@import '@src/styles/vars.scss';
+
+.partners {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $display-mobile) {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: flex-start;
+        grid-auto-columns: 30%;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+}
+
+.partner {
+    max-width: 160px;
+}

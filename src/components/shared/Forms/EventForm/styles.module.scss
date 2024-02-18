@@ -1,0 +1,45 @@
+@import '@src/styles/vars.scss';
+
+.form {
+    display: grid;
+    row-gap: 16px;
+    column-gap: 32px;
+    grid-template-columns: repeat(2, 1fr);
+
+    textarea {
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+
+    label {
+        grid-column-start: 2;
+    }
+
+    div {
+        width: 100%;
+        grid-column-start: 2;
+
+        button {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: $display-mobile) {
+        grid-template-columns: 1fr;
+
+        textarea {
+            grid-row-start: auto;
+            grid-row-end: auto;
+        }
+
+        label {
+            grid-column-start: auto;
+        }
+
+        div {
+            grid-column-start: auto;
+
+        }
+
+    }
+}

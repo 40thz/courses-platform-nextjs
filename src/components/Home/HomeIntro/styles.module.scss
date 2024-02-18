@@ -1,0 +1,25 @@
+@import '@src/styles/vars.scss';
+
+.home__intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .logo {
+    max-width: 538px;
+    margin-bottom: 32px;
+  }
+  .title {
+    margin-bottom: 20px;
+  }
+  .subtitle {
+    margin: 15px 0;
+  }
+
+  @media screen and (max-width: $display-mobile) {
+    .logo {
+      margin-bottom: 0;
+      order: 1;
+    }
+  }
+}

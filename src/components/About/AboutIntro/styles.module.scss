@@ -1,0 +1,25 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &_title {
+        max-width: 400px;
+    }
+
+    &_item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+
+    }
+
+    .btn {
+        margin-top: 16px;
+    }
+}
+
+.intro {
+    grid-template-columns: 1.2fr 1fr;
+}

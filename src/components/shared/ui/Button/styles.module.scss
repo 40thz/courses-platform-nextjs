@@ -1,0 +1,35 @@
+@import '@src/styles/vars.scss';
+
+.button {
+  transition: all 0.5s;
+  border-radius: 8px;
+  padding: 13px 38px;
+  width: fit-content;
+
+  &.default {
+    background: $default;
+    border: 2px solid $default;
+  }
+
+  &.white {
+    background: #fff;
+    border: 2px solid #002D65;
+
+    p {
+      color: #000;
+    }
+  }
+
+  &.gradient {
+    background: #EEF0F2;
+    border: 2px solid #002D65;
+
+    p {
+      color: #000;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 20px 0px rgba(0, 7, 184, 0.3);
+  }
+}

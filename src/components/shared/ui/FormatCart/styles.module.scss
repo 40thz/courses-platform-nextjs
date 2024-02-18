@@ -1,0 +1,46 @@
+@import '@src/styles/vars.scss';
+
+.formatCart {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow: hidden;
+
+    .marker {
+        position: relative;
+        padding-left: 15px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            height: 2px;
+            width: 2px;
+            border-radius: 100%;
+            background: #000;
+        }
+    }
+
+    .line {
+        pointer-events: none;
+        position: absolute;
+        bottom: -10px;
+        width: 250px;
+        right: 0;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    @media screen and (max-width: $display-tablet) {
+       .line {
+        max-width: 200px;
+       }
+    }
+}

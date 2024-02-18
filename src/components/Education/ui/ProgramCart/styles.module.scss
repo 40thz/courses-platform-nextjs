@@ -1,0 +1,59 @@
+@import '@src/styles/vars.scss';
+
+.cart {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr;
+    gap: 8px;
+    cursor: pointer;
+
+    &_left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &_tags {
+        display: flex;
+        gap: 16px;
+    }
+
+    &_tag {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    &_typography {
+        font-family: var(--font-montserrat);
+        opacity: 0.3;
+        font-weight: bold;
+        text-align: right;
+    }
+
+    &:hover {
+        .cart_typography {
+            opacity: 1;
+        }
+    }
+
+    @media screen and (max-width: $display-tablet) {
+        &_left {
+            gap: 12px;
+        }
+
+        &_right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    @media screen and (max-width: $display-mobile) {
+        grid-template-columns: 1fr;
+
+        &_right {
+            margin-top: 16px;
+            justify-content: flex-end;
+        }
+    }
+}

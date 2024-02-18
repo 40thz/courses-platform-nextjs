@@ -1,0 +1,23 @@
+@import '@src/styles/vars.scss';
+
+.slider {
+    max-width: 475px;
+    padding: 0 60px;
+    position: relative;
+}
+
+.teamcart {
+    padding: 0;
+    background: transparent;
+    
+    h1 {
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: $display-mobile) {
+    .slider { 
+        max-width: 300px;
+        padding: 0;
+    }
+}

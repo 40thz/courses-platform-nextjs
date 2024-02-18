@@ -1,0 +1,29 @@
+@import '@src/styles/vars.scss';
+
+.about_list {
+  &_items {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0 20px;
+  }
+
+  @media screen and (max-width: $display-tablet) {
+    &_items {
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: flex-start;
+      grid-auto-columns: 30%;
+      overflow: auto;
+    }
+  }
+
+  @media screen and (max-width: $display-mobile) {
+    &_items {
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: flex-start;
+      grid-auto-columns: 47%;
+      overflow: auto;
+    }
+  }
+}

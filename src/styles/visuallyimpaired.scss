@@ -1,0 +1,108 @@
+.VisuallyImpaired {
+    img, button, .typography, svg, span {
+        filter: grayscale(1);
+    }
+
+    .typography {
+        &.headlines {
+            font-family: var(--font-nunito);
+            font-weight: 700;
+
+            &.mega {
+                font-size: 75px;
+            }
+
+            &.big {
+                font-size: 55px;
+            }
+
+            &.medium {
+                font-size: 40px;
+            }
+
+            &.small {
+                font-size: 35px;
+            }
+
+            @media screen and (max-width: $display-tablet) {
+                font-weight: 600;
+
+                &.mega {
+                    font-size: 42px;
+                }
+
+                &.big {
+                    font-size: 42px;
+                }
+
+                &.medium {
+                    font-size: 34px;
+                }
+
+                &.small {
+                    font-size: 28px;
+                }
+            }
+        }
+
+        // Body
+        &.body {
+            letter-spacing: 3px;
+            font-family: var(--font-montserrat);
+            font-weight: 400;
+
+            &.mega {
+                font-size: 20px;
+            }
+
+            &.big {
+                font-size: 20px;
+            }
+
+            &.medium {
+                font-size: 16px;
+                font-weight: 300;
+            }
+
+            &.small {
+                font-size: 14px;
+                font-weight: 300;
+            }
+
+            @media screen and (max-width: $display-tablet) {
+                &.mega {
+                    font-size: 16px;
+                }
+
+                &.big {
+                    font-size: 16px;
+                }
+
+                &.medium {
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+
+                &.small {
+                    font-size: 12px;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        // all
+        &.all {
+            font-family: var(--font-montserrat);
+            
+            &.btn {
+                font-weight: 400;
+                font-size: 16px;
+            }
+
+            &.header {
+                font-weight: 500;
+                font-size: 18px;
+            }
+        }
+    }
+}

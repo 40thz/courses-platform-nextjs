@@ -1,0 +1,27 @@
+.sliderArrow {
+    transition: all 0.5s;
+    padding: 15px 6px;
+    border-radius: 8px;
+    background: #fff;
+    position: absolute;
+    top: 45%;
+    transform: translate(0, -50%);
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+
+
+    .next {
+        right: -45px;
+    }
+}
+
+.prev {
+    left: -45px;
+}
+
+.next {
+    right: -45px;
+}

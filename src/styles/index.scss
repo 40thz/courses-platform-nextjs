@@ -1,0 +1,16 @@
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
+@import './vars.scss';
+@import './global.scss';
+@import './visuallyimpaired.scss';
+
+// UI
+@import '@ui/Typography/styles.scss';
+@import '@ui/QuestionCart/styles.scss';
+
+
+// Components
+@import '@components/shared/containers/Processing/styles.scss';
+@import '@components/shared/Forms/FeedBackForm/styles.scss';
+@import '@components/Education/EducationQuestion/styles.scss';

@@ -1,0 +1,19 @@
+@import '@src/styles/vars.scss';
+
+.program {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(2, 1fr);
+
+    &_footer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 32px;
+        margin-top: 32px;
+    }
+
+    @media screen and (max-width: $display-tablet) {
+        grid-template-columns: 1fr;
+    }
+}

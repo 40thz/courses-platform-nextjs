@@ -1,0 +1,12 @@
+@import '@src/styles/vars.scss';
+
+.education {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+
+    @media screen and (max-width: $display-tablet) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

@@ -1,0 +1,17 @@
+@import '@src/styles/vars.scss';
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    &_inner {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    @media screen and (max-width: $display-tablet) {
+        gap: 20px;
+    }
+}

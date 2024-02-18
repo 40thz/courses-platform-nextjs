@@ -1,0 +1,10 @@
+@import '@src/styles/vars.scss';
+
+.title {
+    margin-bottom: 32px;
+  
+    @media screen and (max-width: $display-tablet) {
+      margin-bottom: 20px;
+    }
+  }
+  

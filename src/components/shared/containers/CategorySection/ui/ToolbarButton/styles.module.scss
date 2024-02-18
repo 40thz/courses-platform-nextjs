@@ -1,0 +1,17 @@
+.toolbar_item {
+    cursor: pointer;
+    padding: 4px 16px;
+    border-radius: 8px;
+    border: 1px solid #A3A3A3;
+    transition: all 0.2s;
+
+    &.active {
+        border: 1px solid #fff;
+        background: #fff;
+    }
+
+    &:hover {
+        border: 1px solid #fff;
+        background: #fff;
+    }
+}

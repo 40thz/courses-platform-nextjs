@@ -1,0 +1,36 @@
+@import '@src/styles/vars.scss';
+
+.feedback {
+  display: flex;
+  justify-content: space-between;
+
+  &_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 540px;
+  }
+
+  .descirptionBottom {
+   a {
+    color: #011022;
+   }
+  }
+  @media screen and (max-width: $display-tablet) {
+    gap: 20px;
+
+    &__inner {
+      justify-content: flex-start;
+      gap: 20px;
+      max-width: 300px;
+    }
+  }
+
+  @media screen and (max-width: $display-mobile) {
+    flex-direction: column;
+
+    .grid {
+      max-width: 288px;
+    }
+  }
+}

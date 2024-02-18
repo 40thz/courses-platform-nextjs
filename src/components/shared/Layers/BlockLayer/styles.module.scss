@@ -1,0 +1,17 @@
+@import '@src/styles/vars.scss';
+
+.layer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+
+  @media screen and (max-width: $display-tablet) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.column {
+  grid-template-columns: 1fr;
+
+}

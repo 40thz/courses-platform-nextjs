@@ -1,0 +1,32 @@
+@import '@src/styles/vars.scss';
+
+.input {
+  cursor: pointer;
+  padding: 14px 20px;
+  border-radius: 8px;
+  border: 2px solid $default;
+  box-sizing: border-box;
+  width: 100%;
+
+  &:focus {
+    cursor: auto;
+    outline: none;
+  }
+
+  &.error {
+    border: 2px solid #d01c2f;
+  }
+}
+
+.textarea {
+  width: 100%;
+  resize: none;
+  max-height: 120px;
+  height: 100%;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

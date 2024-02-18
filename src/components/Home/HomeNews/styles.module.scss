@@ -1,0 +1,17 @@
+@import '@src/styles/vars.scss';
+
+.news {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @media screen and (max-width: $display-tablet) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: $display-mobile) {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

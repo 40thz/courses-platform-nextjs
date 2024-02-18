@@ -1,0 +1,49 @@
+@import '@src/styles/vars.scss';
+
+.articleList {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    &_menu {
+        display: flex;
+        gap: 40px;
+
+        p {
+            cursor: pointer;
+        }
+    }
+
+    &_content {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    @media screen and (max-width: $display-tablet) {
+        &_content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media screen and (max-width: $display-mobile) {
+        &_menu {
+            padding-left: 20px;
+            display: grid;
+            grid-auto-flow: column;
+            justify-content: flex-start;
+            grid-auto-columns: 70%;
+            overflow: auto;
+
+            p {
+                white-space: nowrap;
+            }
+        }
+
+        &_content {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+}

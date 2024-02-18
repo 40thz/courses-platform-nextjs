@@ -1,0 +1,28 @@
+@import "@src/styles/vars.scss";
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px;
+  border-radius: 20px;
+  background: #fff;
+  
+  &_image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+
+    &_pattern {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+    }
+
+    &_teammate {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}

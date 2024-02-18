@@ -1,0 +1,24 @@
+@import '@src/styles/vars.scss';
+
+.layer {
+    position: relative;
+    background: $default;
+    border-radius: 20px;
+    overflow: hidden;
+
+    &_line {
+        pointer-events: none;
+        position: absolute;
+        width: 75%;
+        right: 0;
+        bottom: -5px;
+        z-index: 1;
+    }
+
+    @media screen and (max-width: $display-mobile) {
+        &_line {
+            width: 200%;
+            //  bottom: 30%;
+        }
+    }
+}

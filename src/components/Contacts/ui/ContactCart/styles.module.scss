@@ -1,0 +1,12 @@
+.cart {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        max-width: 220px;
+    }
+}

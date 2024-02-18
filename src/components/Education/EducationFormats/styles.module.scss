@@ -1,0 +1,11 @@
+@import '@src/styles/vars.scss';
+
+.formats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+
+    @media screen and (max-width: $display-mobile) {
+        grid-template-columns: 1fr;
+    }
+}

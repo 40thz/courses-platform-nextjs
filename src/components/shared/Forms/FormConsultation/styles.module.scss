@@ -1,0 +1,30 @@
+@import '@src/styles/vars.scss';
+
+.consultation_form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 12px;
+    column-gap: 16px;
+
+    button {
+        margin-top: 16px;
+    }
+
+    .input_row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @media screen and (max-width: $display-tablet) {
+        max-width: 535px;
+    }
+
+    @media screen and (max-width: $display-mobile) {
+        grid-template-columns: 1fr;
+
+        button {
+            margin-top: 0;
+        }
+    }
+}

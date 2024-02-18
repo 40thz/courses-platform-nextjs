@@ -1,0 +1,41 @@
+@import "@src/styles/vars.scss";
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0;
+  border-radius: 20px;
+
+
+  &_image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 400px;
+    margin-bottom: 16px;
+
+    &_pattern {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+    }
+
+    &_teammate {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  @media screen and (max-width: $display-mobile) {
+    &_image {
+      min-height: 300px;
+      margin-bottom: 0px;
+    }
+  }
+}

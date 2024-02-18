@@ -1,0 +1,9 @@
+@import '@src/styles/vars.scss';
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    gap: 32px;
+}

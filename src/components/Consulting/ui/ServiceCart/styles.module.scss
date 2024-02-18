@@ -1,0 +1,44 @@
+@import '@src/styles/vars.scss';
+
+.cart {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    gap: 16px;
+    transition: all 0.5s;
+
+    &_image {
+        max-width: 225px;
+        width: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    &_side {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &:hover {
+        box-shadow: 4px 4px 18px 0px rgba(34, 60, 80, 0.2);
+    }
+
+    @media screen and (max-width: $display-tablet) {
+        &_side {
+            justify-content: center;
+        }
+    }
+
+    @media screen and (max-width: $display-mobile) {
+        gap: 16px;
+        flex-direction: column;
+
+        &_image {
+            max-width: 100%;
+        }
+    }
+}

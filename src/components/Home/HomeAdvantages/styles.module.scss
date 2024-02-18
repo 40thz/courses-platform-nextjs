@@ -1,0 +1,67 @@
+@import '@src/styles/vars.scss';
+
+.advantages {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background: $default;
+  border-radius: 20px;
+  padding: 32px;
+  overflow: hidden;
+
+  &_line {
+    position: absolute;
+    bottom: -45%;
+    right: -45%;
+    width: 100%;
+    pointer-events: none;
+  }
+
+  &_items {
+    display: flex;
+    justify-content: space-between;
+    max-width: 455px;
+    row-gap: 16px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+
+  &_title {
+    margin-bottom: 32px;
+  }
+
+  &_side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: $display-tablet) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+
+    &_items {
+      max-width: 605px;
+      margin-top: 20px;
+    }
+
+    &_side {
+      gap: 20px;
+    }
+
+    &_line {
+      width: 800px;
+      bottom: -30%;
+      right: -35%;
+    }
+  }
+
+  @media screen and (max-width: $display-mobile) {
+    &_items {
+      max-width: 607px;
+      width: 607px;
+    }
+  }
+}

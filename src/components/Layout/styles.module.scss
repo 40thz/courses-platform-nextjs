@@ -1,0 +1,23 @@
+@import '@src/styles/vars.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 100px;
+
+  @media screen and (max-width: $display-tablet) {
+    gap: 60px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  flex: 1;
+
+  @media screen and (max-width: $display-tablet) {
+    gap: 60px;
+  }
+}

@@ -1,0 +1,8 @@
+.full {
+    grid-column-start: 1;
+    grid-column-end: none;
+}
+
+.half {
+    grid-column-end: 3;
+}
